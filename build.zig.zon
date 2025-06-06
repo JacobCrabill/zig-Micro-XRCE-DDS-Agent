@@ -1,0 +1,44 @@
+.{
+    .name = .Micro_XRCE_DDS_Agent,
+    .version = "3.0.1",
+    .fingerprint = 0xdc91752a0e84bc81, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.14.0",
+    .dependencies = .{
+        .fastdds = .{
+            // v3.2.2
+            .url = "https://github.com/JacobCrabill/zig-Fast-DDS/archive/7aedf67b35ccc03741b012eb59f862f9fbd77f1d.tar.gz",
+            .hash = "zig_fastdds-3.2.2-8klu5ptKAADI32P6NzmsPp_IDe9JGyc-xJsOB4gmdCqB",
+        },
+        .fastcdr = .{
+            // v2.3.0
+            .url = "https://github.com/JacobCrabill/zig-Fast-CDR/archive/6498e9db4cda653d7786c6b8f51c20f78f9ffd69.tar.gz",
+            .hash = "zig_fastcdr-2.3.0-5tEjoFkKAAAEtD76sJsfl5ttGvKs9amihNhAuWRScumu",
+        },
+        .microcdr = .{
+            // v2.0.1
+            .url = "https://github.com/JacobCrabill/zig-Micro-CDR/archive/2f9de9935faa2ae42586c3a03f5b8131ac327ac0.tar.gz",
+            .hash = "microcdr-2.0.1-8sp6bosKAACsIO_8DJnpcrqE7FeEHQK04mgQZ59Edb28",
+        },
+        .uxr_client = .{
+            // v3.0.0
+            .url = "https://github.com/JacobCrabill/zig-Micro-XRCE-DDS-Client/archive/e93abb501a961de891fabaee4ef9ea952ebd9ad6.tar.gz",
+            .hash = "Micro_XRCE_DDS_Client-3.0.0-i47TMwMaAAD2X3-6TyHAzaTY1P1DGWTaDWTa5dldAeaD",
+        },
+        .uxr_agent = .{
+            // v3.0.1
+            .url = "https://github.com/eprosima/Micro-XRCE-DDS-Agent/archive/155cfaaf8b7abac2e85d4a62d3649b09ace0be55.tar.gz",
+            .hash = "N-V-__8AAACQPACe0O4DFsznYhdQeeM2-wn8hty7gHQdSoge",
+        },
+        // .spdlog = .{
+        //     .url = "https://github.com/gabime/spdlog/archive/tags/v1.9.2.tar.gz",
+        //     .hash = "N-V-__8AAJ82FwBby8ZGBPt77QSQokpAK_LpoTCJgixyCGmu",
+        // },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        // todo - remove
+        "src/",
+        "include/",
+    },
+}
