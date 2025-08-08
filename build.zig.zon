@@ -21,8 +21,8 @@
         },
         .uxr_client = .{
             // v3.0.0
-            .url = "https://github.com/JacobCrabill/zig-Micro-XRCE-DDS-Client/archive/e93abb501a961de891fabaee4ef9ea952ebd9ad6.tar.gz",
-            .hash = "Micro_XRCE_DDS_Client-3.0.0-i47TMwMaAAD2X3-6TyHAzaTY1P1DGWTaDWTa5dldAeaD",
+            .url = "https://github.com/JacobCrabill/zig-Micro-XRCE-DDS-Client/archive/038f318fb9a9c24fea5d48b18e22361c3b9cc413.tar.gz",
+            .hash = "Micro_XRCE_DDS_Client-3.0.0-i47TM9MZAACECdgPgSqEyOTS34oELVPAz2pbJ3v5HNOd",
         },
         .uxr_agent = .{
             // v3.0.1
