@@ -25,20 +25,17 @@
             .hash = "Micro_XRCE_DDS_Client-3.0.0-i47TM9MZAACECdgPgSqEyOTS34oELVPAz2pbJ3v5HNOd",
         },
         .uxr_agent = .{
-            // v3.0.1
-            .url = "https://github.com/eprosima/Micro-XRCE-DDS-Agent/archive/155cfaaf8b7abac2e85d4a62d3649b09ace0be55.tar.gz",
-            .hash = "N-V-__8AAACQPACe0O4DFsznYhdQeeM2-wn8hty7gHQdSoge",
+            // v3.0.1 with bug fixes for Zig compilation
+            .url = "https://github.com/JacobCrabill/Micro-XRCE-DDS-Agent/archive/54d79c7689bf98680aa35997c66595a6633dc821.tar.gz",
+            .hash = "N-V-__8AAFCOPAAJ5I4oKgmP-WE0hU8QruKbIcA0G41B6WjG",
         },
-        // .spdlog = .{
-        //     .url = "https://github.com/gabime/spdlog/archive/tags/v1.9.2.tar.gz",
-        //     .hash = "N-V-__8AAJ82FwBby8ZGBPt77QSQokpAK_LpoTCJgixyCGmu",
-        // },
+        .spdlog = .{
+            .url = "https://github.com/gabime/spdlog/archive/tags/v1.14.1.tar.gz",
+            .hash = "N-V-__8AAJSgEQBm_CX16IKfCtcWMyIFbucHpA9_ojS59TbP",
+        },
     },
     .paths = .{
         "build.zig",
         "build.zig.zon",
-        // todo - remove
-        "src/",
-        "include/",
     },
 }

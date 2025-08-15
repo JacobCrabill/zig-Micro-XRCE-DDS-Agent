@@ -25,11 +25,11 @@ pub fn build(b: *std.Build) void {
     const fastcdr = b.dependency("fastcdr", std_dep_options).artifact("fast-cdr");
     const microcdr = b.dependency("microcdr", std_dep_options).artifact("microcdr");
     const uxr_client = b.dependency("uxr_client", std_dep_options).artifact("micro-xrce-dds-client");
-    // const spdlog = b.dependency("spdlog", .{});
+    const spdlog = b.dependency("spdlog", .{});
     const upstream = b.dependency("uxr_agent", .{});
 
     const std_cxx_flags: []const []const u8 = &.{
-        "--std=c++11",
+        "--std=c++17",
         "-pthread",
         "-Wall",
         "-Wextra",
@@ -61,7 +61,7 @@ pub fn build(b: *std.Build) void {
 
     // It seems that when logging is enabled, we encounter an illegal instruction and crash.
     // So, just leave it entirely disabled.
-    const spdlog_supported: bool = false;
+    const spdlog_supported: bool = true;
 
     const config_h = b.addConfigHeader(.{
         .style = .{ .cmake = upstream.path("include/uxr/agent//config.hpp.in") },
@@ -93,7 +93,7 @@ pub fn build(b: *std.Build) void {
     });
     uagent_lib.addIncludePath(upstream.path("include"));
     uagent_lib.addIncludePath(upstream.path("src/cpp"));
-    // uagent_lib.addIncludePath(spdlog.path("include"));
+    uagent_lib.addIncludePath(spdlog.path("include"));
     uagent_lib.installHeadersDirectory(upstream.path("include"), "", .{ .include_extensions = &.{ ".h", ".hpp" } });
 
     uagent_lib.linkLibrary(fastdds);
@@ -118,7 +118,7 @@ pub fn build(b: *std.Build) void {
     uagent.linkLibrary(microcdr);
     uagent.linkLibrary(uxr_client);
     uagent.linkLibrary(uagent_lib);
-    // uagent.addIncludePath(spdlog.path("include"));
+    uagent.addIncludePath(spdlog.path("include"));
 
     b.installArtifact(uagent);
 }
