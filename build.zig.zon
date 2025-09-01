@@ -5,9 +5,9 @@
     .minimum_zig_version = "0.14.0",
     .dependencies = .{
         .fastdds = .{
-            // v3.2.2
-            .url = "https://github.com/JacobCrabill/zig-Fast-DDS/archive/7aedf67b35ccc03741b012eb59f862f9fbd77f1d.tar.gz",
-            .hash = "zig_fastdds-3.2.2-8klu5ptKAADI32P6NzmsPp_IDe9JGyc-xJsOB4gmdCqB",
+            // v3.2.2 - Different from ZigROS
+            .url = "https://github.com/JacobCrabill/zig-Fast-DDS/archive/32cafe89081dceb6c439feeeb931f8e38e1b5287.tar.gz",
+            .hash = "zig_fastdds-3.2.2-8klu5rpKAAA3meWWn5tXoy858Chw3J_Opr-4XJ48wk4s",
         },
         .fastcdr = .{
             // v2.3.0
